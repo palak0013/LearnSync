@@ -1,5 +1,6 @@
 from sqlalchemy import Column, Integer, String, DateTime
 from datetime import datetime
+from sqlalchemy.orm import relationship
 
 from database.database import Base
 
@@ -11,3 +12,5 @@ class User(Base):
     email = Column(String(255), unique=True, nullable=False)
     hashed_password = Column(String(255), nullable=False)
     created_at = Column(DateTime, default=datetime.utcnow)
+    
+    spaces = relationship("Space", back_populates="owner", cascade="all, delete") # one user can have many spaces(one to many relationship)
