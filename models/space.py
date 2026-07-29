@@ -19,3 +19,7 @@ class Space(Base):
     owner_id = Column(Integer, ForeignKey("users.id"), nullable=False)
 
     owner = relationship("User", back_populates="spaces")
+    
+    resources = relationship("Resource", back_populates="space")
+    
+    notes = relationship("Note", back_populates="space")
