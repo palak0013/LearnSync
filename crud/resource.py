@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session
-
+from typing import Optional
 from models.resource import Resource
 from schemas.resource import ResourceCreate, ResourceUpdate
 
@@ -60,3 +60,35 @@ def delete_resource(db: Session, resource_id: int):
     db.commit()
 
     return db_resource
+
+def search_resources(
+    db: Session,
+    title: Optional[str] = None,
+    resource_type: Optional[str] = None,
+    status: Optional[str] = None,
+    space_id: Optional[int] = None,
+):
+
+    query = db.query(Resource)
+
+    if title:
+        query = query.filter(
+            Resource.title.ilike(f"%{title}%")
+        )
+
+    if resource_type:
+        query = query.filter(
+            Resource.resource_type.ilike(f"%{resource_type}%")
+        )
+
+    if status:
+        query = query.filter(
+            Resource.status.ilike(f"%{status}%")
+        )
+
+    if space_id:
+        query = query.filter(
+            Resource.space_id == space_id
+        )
+
+    return query.all()

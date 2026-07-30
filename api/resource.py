@@ -3,6 +3,8 @@ from sqlalchemy.orm import Session
 from database.database import get_db
 from crud.resource import (create_resource, get_all_resources, get_resource_by_id, update_resource, delete_resource)
 from schemas.resource import (ResourceCreate, ResourceUpdate, ResourceResponse)
+from typing import Optional
+from crud.resource import search_resources
 
 router = APIRouter(
     prefix="/resources",
@@ -15,6 +17,24 @@ def create_new_resource(
     db: Session = Depends(get_db)
 ):
     return create_resource(db, resource)
+
+
+@router.get("/search", response_model=list[ResourceResponse])
+def search(
+    title: Optional[str] = None,
+    resource_type: Optional[str] = None,
+    status: Optional[str] = None,
+    space_id: Optional[int] = None,
+    db: Session = Depends(get_db),
+):
+
+    return search_resources(
+        db=db,
+        title=title,
+        resource_type=resource_type,
+        status=status,
+        space_id=space_id,
+    )
 
 @router.get("/", response_model=list[ResourceResponse])
 def get_resources(

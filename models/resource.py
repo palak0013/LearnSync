@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, String, DateTime, ForeignKey
 from sqlalchemy.orm import relationship
 from datetime import datetime
-
+from models.resource_tag import resource_tags
 from database.database import Base
 
 
@@ -27,3 +27,7 @@ class Resource(Base):
     space_id = Column(Integer, ForeignKey("spaces.id"), nullable=False)
 
     space = relationship("Space", back_populates="resources")
+    
+    tags = relationship("Tag", secondary=resource_tags, back_populates="resources")
+    
+    revisions = relationship("Revision", back_populates="resource")
