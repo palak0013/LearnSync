@@ -11,6 +11,7 @@ from models.tag import Tag
 from api.tag import router as tag_router
 from models.revision import Revision
 from api.revision import router as revision_router
+from api.analytics import router as analytics_router
 
 Base.metadata.create_all(bind=engine)
 
@@ -26,3 +27,4 @@ app.include_router(resource.router)
 app.include_router(note_router)
 app.include_router(tag_router)
 app.include_router(revision_router)
+app.include_router(analytics_router)
