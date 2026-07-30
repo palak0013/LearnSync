@@ -15,9 +15,13 @@ from api.analytics import router as analytics_router
 
 Base.metadata.create_all(bind=engine)
 
-app = FastAPI()
+app = FastAPI(
+    title="LearnSync API",
+    description="Backend API for managing learning resources, notes, revisions, and analytics.",
+    version="1.0.0",
+)
 
-@app.get("/")
+@app.get("/", tags=["Home"])
 def home():
     return {"message": "Welcome to LearnSync API 🚀"}
 
