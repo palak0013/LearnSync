@@ -68,7 +68,7 @@ https://learnsync-judt.onrender.com
 ```
 https://learnsync-judt.onrender.com/docs
 ```
-**Tip:** Use **Postman** to authenticate and test protected APIs by adding the JWT as a **Bearer Token**.
+*Tip:* Use **Postman** to authenticate and test protected APIs by adding the JWT as a **Bearer Token**.
 ---
 
 ## 🔐 Authentication
