@@ -73,7 +73,7 @@ https://learnsync-judt.onrender.com/docs
 
 ## 🔐 Authentication
 
-The project uses **JWT (JSON Web Tokens)** for authentication.>Use **Postman** to log in and obtain a JWT access token. Include the token as a **Bearer Token** when accessing protected endpoints.
+The project uses **JWT (JSON Web Tokens)** for authentication. 
 
 1. Register a new user.
 2. Login to receive an access token.
