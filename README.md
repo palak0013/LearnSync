@@ -1,109 +1,168 @@
-# LearnSync
 # 🚀 LearnSync
 
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?logo=postgresql&logoColor=white)
-![Render](https://img.shields.io/badge/Render-Live-success)
-![Neon](https://img.shields.io/badge/Database-Neon-green)
+LearnSync is a backend application built with **FastAPI** to help users organize and manage everything they are learning in one place. It allows users to create learning spaces, save resources, write notes, track revisions, organize content with tags, and view learning analytics.
 
+The project follows a clean folder structure and uses JWT authentication to secure protected APIs.
 
-LearnSync is a backend application built with FastAPI for organizing learning resources, notes, revision schedules, and progress tracking. It provides a secure REST API with JWT authentication and follows a modular backend architecture.
+---
 
-## Features
+## ✨ Features
 
-- User authentication with JWT
-- Learning Spaces management
-- Learning Resources CRUD
-- Notes management
-- Resource tagging
-- Search and filtering
-- Revision scheduling
-- Analytics dashboard
-- API testing with Pytest
+- User Registration & Login (JWT Authentication)
+- Create and Manage Learning Spaces
+- Add Learning Resources
+- Create Notes
+- Organize Resources with Tags
+- Search and Filter Resources
+- Revision Tracking
+- Analytics Dashboard
+- RESTful APIs
+- Swagger Documentation
+- Unit Testing with Pytest
 
-## Tech Stack
+---
 
-- Python
+## 🛠 Tech Stack
+
 - FastAPI
-- PostgreSQL
-- SQLAlchemy
+- Python
+- PostgreSQL (Neon)
+- SQLAlchemy ORM
 - Pydantic
 - JWT Authentication
-- Passlib
+- Passlib (Password Hashing)
 - Pytest
+- Render (Deployment)
 
-## Project Structure
+---
 
-```
-LearnSync
+## 📂 Project Structure
+
+```text
+LearnSync/
+│
 ├── api/
 ├── crud/
 ├── database/
 ├── models/
 ├── schemas/
-├── tests/
 ├── utils/
+├── tests/
 ├── main.py
 ├── requirements.txt
 └── README.md
 ```
 
-## Authentication
+---
 
-Protected endpoints require a JWT access token.
+## 🌐 Live Demo
 
-1. Register a user.
-2. Login using `/auth/login`.
-3. Copy the returned `access_token`.
-4. Use the token as a Bearer token when accessing protected endpoints.
+**Base URL**
 
-## Setup
+```
+https://learnsync-judt.onrender.com
+```
 
-Clone the repository.
+**Swagger Documentation**
+
+```
+https://learnsync-judt.onrender.com/docs
+```
+**Tip:** Use **Postman** to authenticate and test protected APIs by adding the JWT as a **Bearer Token**.
+---
+
+## 🔐 Authentication
+
+The project uses **JWT (JSON Web Tokens)** for authentication.Use **Postman** to log in and obtain a JWT access token. Include the token as a **Bearer Token** when accessing protected endpoints.
+
+1. Register a new user.
+2. Login to receive an access token.
+3. Use the token as a Bearer Token for protected endpoints.
+
+---
+
+## 📌 API Modules
+
+- Authentication
+- Learning Spaces
+- Learning Resources
+- Notes
+- Tags
+- Search & Filters
+- Revision System
+- Analytics Dashboard
+
+---
+
+## 🧪 Running Locally
+
+Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/LearnSync.git
+git clone https://github.com/<palak0013>/LearnSync.git
+```
+
+Move into the project:
+
+```bash
 cd LearnSync
 ```
 
-Create a virtual environment.
+Create a virtual environment:
 
 ```bash
 python -m venv venv
 ```
 
-Install dependencies.
+Activate it:
+
+**Windows**
+
+```bash
+venv\Scripts\activate
+```
+
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Create a `.env` file.
+Create a `.env` file and add your database credentials:
 
 ```env
-DATABASE_URL=your_database_url
+DATABASE_URL=your_neon_database_url
 SECRET_KEY=your_secret_key
 ALGORITHM=HS256
 ACCESS_TOKEN_EXPIRE_MINUTES=30
 ```
 
-Run the application.
+Run the application:
 
 ```bash
 uvicorn main:app --reload
 ```
 
-## API Documentation
+Open:
 
-After starting the server, visit:
-
-- Swagger UI: `http://127.0.0.1:8000/docs`
-- ReDoc: `http://127.0.0.1:8000/redoc`
-
-## Testing
-
-Run the test suite using:
-
-```bash
-python -m pytest
 ```
+http://127.0.0.1:8000/docs
+```
+
+---
+
+## 📊 Current Features
+
+- JWT Authentication
+- CRUD Operations
+- Search & Filtering
+- Notes Management
+- Resource Tagging
+- Revision Scheduling
+- Analytics Dashboard
+- Automated Testing
+- Live Deployment
+
+---
+
+
