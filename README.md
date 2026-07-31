@@ -1,4 +1,11 @@
 # LearnSync
+# 🚀 LearnSync
+
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?logo=postgresql&logoColor=white)
+![Render](https://img.shields.io/badge/Render-Live-success)
+![Neon](https://img.shields.io/badge/Database-Neon-green)
+
 
 LearnSync is a backend application built with FastAPI for organizing learning resources, notes, revision schedules, and progress tracking. It provides a secure REST API with JWT authentication and follows a modular backend architecture.
 
