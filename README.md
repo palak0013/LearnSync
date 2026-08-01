@@ -99,7 +99,7 @@ The project uses **JWT (JSON Web Tokens)** for authentication.
 Clone the repository:
 
 ```bash
-git clone https://github.com/<palak0013>/LearnSync.git
+git clone https://github.com/palak0013/LearnSync.git
 ```
 
 Move into the project:
