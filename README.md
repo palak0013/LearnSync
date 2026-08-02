@@ -4,6 +4,16 @@ LearnSync is a backend application built with **FastAPI** to help users organize
 
 The project follows a clean folder structure and uses JWT authentication to secure protected APIs.
 
+## Live Demo
+
+**Application**
+
+[LearnSync](https://learnsync-judt.onrender.com)
+
+**API Documentation**
+
+[Swagger UI](https://learnsync-judt.onrender.com/docs)
+
 ---
 
 ## ✨ Features
