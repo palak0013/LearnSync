@@ -14,6 +14,8 @@ The project follows a clean folder structure and uses JWT authentication to secu
 
 [Swagger UI](https://learnsync-judt.onrender.com/docs)
 
+>**Tip:** Use **Postman** to authenticate and test protected APIs by adding the JWT as a **Bearer Token**.
+
 ---
 
 ## ✨ Features
@@ -63,22 +65,6 @@ LearnSync/
 └── README.md
 ```
 
----
-
-## 🌐 Live Demo
-
-**Base URL**
-
-```
-https://learnsync-judt.onrender.com
-```
-
-**Swagger Documentation**
-
-```
-https://learnsync-judt.onrender.com/docs
-```
->**Tip:** Use **Postman** to authenticate and test protected APIs by adding the JWT as a **Bearer Token**.
 ---
 
 ## 🔐 Authentication
