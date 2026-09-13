@@ -1,10 +1,16 @@
-# 🚀 LearnSync
+# 📚LearnSync
 
-LearnSync is a backend application built with **FastAPI** to help users organize and manage everything they are learning in one place. It allows users to create learning spaces, save resources, write notes, track revisions, organize content with tags, and view learning analytics.
+LearnSync is a backend-first personal learning management system built with **FastAPI**.
 
-The project follows a clean folder structure and uses JWT authentication to secure protected APIs.
+The idea is simple: learning information is often scattered across different platforms — courses, YouTube videos, documentation, GitHub repositories, notes, coding platforms, personal projects, and revision plans.
 
-## Live Demo
+LearnSync provides a centralized backend for organizing and tracking these parts of a learning journey through REST APIs.
+
+The project is primarily focused on applying practical **backend engineering concepts** rather than building a large frontend application.
+
+---
+
+## 🚀Live Demo
 
 **Application**
 
@@ -14,41 +20,45 @@ The project follows a clean folder structure and uses JWT authentication to secu
 
 [Swagger UI](https://learnsync-judt.onrender.com/docs)
 
->**Tip:** Use **Postman** to authenticate and test protected APIs by adding the JWT as a **Bearer Token**.
+**ReDoc**
+
+[ReDoc](https://learnsync-judt.onrender.com/redoc)
+
+The deployed API can be explored and tested directly through Swagger UI.
 
 ---
 
-## ✨ Features
+## ✨Features
 
-- User Registration & Login (JWT Authentication)
+- User Registration & Login with JWT Authentication
 - Create and Manage Learning Spaces
-- Add Learning Resources
-- Create Notes
+- Add and Manage Learning Resources
+- Create and Manage Notes
 - Organize Resources with Tags
 - Search and Filter Resources
-- Revision Tracking
+- Revision Scheduling and Tracking
 - Analytics Dashboard
 - RESTful APIs
-- Swagger Documentation
-- Unit Testing with Pytest
+- Interactive Swagger Documentation
+- Automated Testing with Pytest
 
 ---
 
-## 🛠 Tech Stack
+## 🛠️Tech Stack
 
-- FastAPI
 - Python
+- FastAPI
 - PostgreSQL (Neon)
 - SQLAlchemy ORM
 - Pydantic
 - JWT Authentication
-- Passlib (Password Hashing)
+- Passlib / bcrypt for Password Hashing
 - Pytest
-- Render (Deployment)
+- Render for Deployment
 
 ---
 
-## 📂 Project Structure
+## 🗂️Project Structure
 
 ```text
 LearnSync/
@@ -64,16 +74,21 @@ LearnSync/
 ├── requirements.txt
 └── README.md
 ```
-
 ---
 
-## 🔐 Authentication
+## 🔒Authentication
 
-The project uses **JWT (JSON Web Tokens)** for authentication. 
+LearnSync uses JWT (JSON Web Tokens) for authentication and protects endpoints that require an authenticated user.
 
-1. Register a new user.
-2. Login to receive an access token.
-3. Use the token as a Bearer Token for protected endpoints.
+**Using Swagger for Authentication**
+
+1. Open the [Swagger UI](https://learnsync-judt.onrender.com/docs).
+2. Register a new user using `/auth/register`.
+3. Login using `/auth/login`.
+4. Copy the returned JWT access token.
+5. Click the `Authorize` button in Swagger.
+6. Enter the token.
+7. Test the protected endpoints directly from the browser.
 
 ---
 
@@ -147,18 +162,56 @@ http://127.0.0.1:8000/docs
 
 ---
 
-## 📊 Current Features
+## 🌐API Workflow
+```text
+Register User
+     ↓
+Login
+     ↓
+Receive JWT Token
+     ↓
+Authorize Swagger
+     ↓
+Create Learning Space
+     ↓
+Add Learning Resources
+     ↓
+Create Notes
+     ↓
+Organize Resources with Tags
+     ↓
+Schedule Revisions
+     ↓
+View Analytics
+```
+---
+## ⚡Backend Concepts Demonstrated
+This project demonstrates practical experience with:
 
-- JWT Authentication
-- CRUD Operations
-- Search & Filtering
-- Notes Management
-- Resource Tagging
-- Revision Scheduling
-- Analytics Dashboard
-- Automated Testing
-- Live Deployment
+- REST API design
+- FastAPI
+- JWT authentication
+- Password hashing
+- Protected API endpoints
+- CRUD operations
+- SQLAlchemy ORM-
+- PostgreSQL
+- Database relationships
+- Pydantic validation
+- Dependency injection
+- API documentation with OpenAPI
+- Automated testing with Pytest
+- Backend deployment
 
 ---
+
+
+## 📈Project Status
+LearnSync is currently focused on its core backend functionality.
+
+The project is intentionally kept simple while focusing on applying fundamental backend engineering concepts using FastAPI, PostgreSQL, authentication, and REST APIs.
+
+---
+
 
 
